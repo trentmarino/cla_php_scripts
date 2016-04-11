@@ -7,7 +7,7 @@ $response = array();
 
 if ($result->num_rows > 0) {
              $response["product"] = array();
-        while($row = $result->fetch_assoc()) {
+        while($row = $result->query($sql)) {
              $product = array();
              $product["idproperty"] = $row["idproperty"];
              $product["property_name"] = $row["property_name"];
