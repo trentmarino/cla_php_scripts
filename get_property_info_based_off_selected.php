@@ -18,7 +18,6 @@ if ($result->num_rows > 0) {
              $product["product_name"] = $row["product_name"];
              array_push($response["product"], $product);
             }
-            echo $response;
  print(json_encode($response));
         }
 
