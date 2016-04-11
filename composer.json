@@ -1,6 +1,6 @@
 {
     "name": "trentmarino/cla_php_scripts",
     "require": {
-      "PHP_EXTENSIONS": ["mysqli"]
-    }
+       "ext-mysql": "*"
+   }
 }
