@@ -26,6 +26,8 @@ if ($result->num_rows > 0) {
  print(json_encode($response));
  echo "string";
         }
+        print(json_encode($response));
+        echo "string";
         echo "string";
 
   $conn->close();
