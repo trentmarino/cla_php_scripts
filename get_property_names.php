@@ -23,7 +23,7 @@ $response = array();
         throw new Exception($conn->error);
     }
 
-//
+// 
 // if ($result->num_rows > 0) {
 //              $response["product"] = array();
 //         while($row = $result->fetch_assoc())
