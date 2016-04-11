@@ -1,6 +1,7 @@
 <?php
-function getCategories(){
+
 include 'db_connect.php';
+
 $response = array();
     $sql = "SELECT product.product_name , property.idproperty,product.idproduct
             FROM property
@@ -16,14 +17,11 @@ if ($result->num_rows > 0) {
              $product["idproperty"] = $row["idproperty"];
              $product["product_name"] = $row["product_name"];
              array_push($response["product"], $product);
-
-
             }
             echo $response;
  print(json_encode($response));
         }
 
   $conn->close();
-}
-getCategories();
+
 ?>
