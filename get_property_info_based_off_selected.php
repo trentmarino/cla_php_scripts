@@ -19,6 +19,7 @@ if ($result->num_rows > 0) {
 
 
             }
+            echo $response;
  print(json_encode($response));
         }
 
