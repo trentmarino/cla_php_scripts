@@ -2,7 +2,7 @@
     "name": "trentmarino/cla_php_scripts",
     "require": {
        "ext-mysql": "*",
-       "php" : "^5.5.12"
+       "php" : "*"
    },
    "require-dev": {
     "heroku/heroku-buildpack-php": "*"
