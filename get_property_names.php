@@ -13,34 +13,24 @@ $response = array();
     $sql = "SELECT * FROM property WHERE deleted = 0";
     $result = $conn->query($sql);
 
+if ($result->num_rows > 0) {
+             $response["product"] = array();
+        while($row = $result->fetch_assoc()) {
+             $product = array();
+             $product["idproperty"] = $row["idproperty"];
+             $product["property_name"] = $row["property_name"];
+             array_push($response["product"], $product);
 
 
-    if($result = $conn->query($sql)) {
-        foreach($result as $row) {
-            echo $row;
+            }
+ print(json_encode($response));
+ echo "string";
         }
-    } else {
-        throw new Exception($conn->error);
-    }
+        print(json_encode($response));
+        echo "string";
+        echo "string";
 
-//
-// if ($result->num_rows > 0) {
-//              $response["product"] = array();
-//         while($row = $result->fetch_assoc())
-//         {
-//              $product = array();
-//              $product["idproperty"] = $row["idproperty"];
-//              $product["property_name"] = $row["property_name"];
-//              array_push($response["product"], $product);
-//             }
-//  print(json_encode($response));
-//  echo "string";
-//         }
-//         print(json_encode($response));
-//         echo "string";
-//         echo "string";
-//
-//   $conn->close();
+  $conn->close();
 }
 getCategories();
 ?>
