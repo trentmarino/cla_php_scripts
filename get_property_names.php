@@ -18,15 +18,13 @@ if ($result->num_rows > 0) {
              $product["idproperty"] = $row["idproperty"];
              $product["property_name"] = $row["property_name"];
              array_push($response["product"], $product);
-
-
-            }
+           }
  print(json_encode($response));
- echo "string";
+ echo "jkjhjkjhbjn";
         }
         print(json_encode($response));
-        echo "string";
-        echo "string";
+        echo "jcj";
+        echo "cuhvjb";
 
   $conn->close();
 
