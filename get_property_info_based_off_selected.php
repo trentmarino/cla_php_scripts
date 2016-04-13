@@ -3,10 +3,15 @@
 include 'db_connect.php';
 
 $response = array();
-    $sql = "SELECT product.product_name , property.idproperty,product.idproduct, product.deposit_amount_min
+    $sql = "SELECT product.product_name , property.idproperty,product.idproduct, product.deposit_amount_min, product_images.image_url
             FROM property
             INNER JOIN product
-            ON property.idproperty=product.idproperty WHERE product.deleted = 0";
+            ON property.idproperty=product.idproperty
+            INNER JOIN producT_images
+            ON product.`idproduct` = `product_images`.`productid`
+            WHERE product.deleted = 0";
+
+
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -17,6 +22,8 @@ if ($result->num_rows > 0) {
              $product["idproperty"] = $row["idproperty"];
              $product["product_name"] = $row["product_name"];
              $product["deposit_amount_min"] = $row["deposit_amount_min"];
+             $product["image_url"] = $row["image_url"];
+
 
              array_push($response["product"], $product);
             }
