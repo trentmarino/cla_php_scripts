@@ -3,7 +3,8 @@
 include 'db_connect.php';
 
 $response = array();
-    $sql = "SELECT product.product_name , property.idproperty,product.idproduct, product.deposit_amount_min, product_images.image_url, product_images.is_thumb
+    $sql = "SELECT product.product_name , property.idproperty,product.idproduct, product.deposit_amount_min, product_images.image_url,
+            product_images.is_thumb
             FROM property
             INNER JOIN product
             ON property.idproperty=product.idproperty
