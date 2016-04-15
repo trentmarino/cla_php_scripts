@@ -23,6 +23,7 @@ if ($result->num_rows > 0) {
              $product["idproperty"] = $row["idproperty"];
              $product["product_name"] = $row["product_name"];
              $product["deposit_amount_min"] = $row["deposit_amount_min"];
+             $product["is_thumb"] = $row["is_thumb"];
              $product["image_url"] = $row["image_url"];
 
 
