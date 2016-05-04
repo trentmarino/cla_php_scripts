@@ -1,0 +1,81 @@
+body {
+    padding-top: 50px;
+}
+.starter-template {
+    padding: 40px 15px;
+    /*text-align: center;*/
+}
+#form{
+    list-style: none;
+    display: block;
+
+}
+
+input {
+    width: 30%;
+}
+#updateButton
+{
+    height: 10%;
+    margin-top: 4%;
+}
+#updateButton button
+{
+height: 70%;
+    width: 25%;
+
+}
+#description
+{
+    background-color: #dae0d8;
+    width: 100%;
+    text-align: left;
+    padding: 4%;
+    visibility: hidden;
+}
+
+#displayImage
+{
+    position: relative;
+
+}
+#addBlock{
+    margin-bottom: 1%;
+    width: 115px;
+}
+#removeBlock{
+    margin-bottom: 1%;
+    width: 115px;
+}
+#imageHolder{
+    position: absolute;
+    left: 60%;
+    top: 15%;
+}
+
+.itemBlock
+{
+
+    background-color: aliceblue;
+    width: 80%;
+
+    border-radius: 25px;
+    padding-left: 20px;
+
+}
+#dropdown{
+    width: auto;
+    margin-left: 33%;
+}
+#Tarea
+{
+    width: 92%;
+    height: 60%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#loadPage{
+    visibility: hidden;
+}
+
+
