@@ -20,22 +20,24 @@
                         currentLocation = value;
                     });
 
-            $('.property').on('change', function(){
-               selectedProperty = $(this).val();
-                console.log(selectedProperty);
-                if(populated === true){
-                    $('.room').find('option').remove();
-                    otherDropDown();
+            $('.property').ready(function () {
+                $('.property').on('change', function () {
+                    $('.room').css('visibility', "visible");
+                    $('#roomLabel').css('visibility', "visible");
+                    selectedProperty = $(this).val();
+                    console.log(selectedProperty);
+                    if (populated === true) {
+                        $('.room').find('option').remove();
+                        otherDropDown();
+
+                    } else {
+                        otherDropDown();
 
 
-                }else {
-                    otherDropDown();
+                    }
 
-
-                }
-
+                });
             });
-
 
         }
     });
