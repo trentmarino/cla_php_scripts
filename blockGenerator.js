@@ -306,7 +306,7 @@
             colour = "green";
             setField.style.backgroundColor = colour;
             console.log("product id is " + product);
-            ArrayInformation[index] = jsonBuilder(4, product, image.name, currentArray[index]);
+            ArrayInformation[index] = jsonBuilder(4, product, "server/php/files/" +image.name, currentArray[index]);
         };
 
         // image.onclick = function () {

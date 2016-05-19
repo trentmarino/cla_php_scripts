@@ -14,32 +14,24 @@ function previewPage(jsonObject) {
         displayorder.push(jsonObject[i].content_order);
         currentProduct = jsonObject[i].productid;
     }
+
     console.log(displayorder);
     for (var order = 0; order < displayorder.length; order++) {
         console.log("current order is: "+displayorder[order]);
-            // console.log("content: " + jsonObject[order].content);
-            // console.log("type: " + jsonObject[order].type);
 
         if (jsonObject[order].type === 1) {
-                loadedContent.push(jsonObject[order].content);
                console.log(jsonObject[order].type +" "+ jsonObject[order].content +" "+ jsonObject[order].content_order);
                isHeading(jsonObject[order].content,jsonObject[order].content_order);
             }
             else if (jsonObject[order].type === 2) {
-                // loadedContent.push(jsonObject[order].content);
                 isSubHeading(jsonObject[order].content,jsonObject[order].content_order);
             }
             else if (jsonObject[order].type === 3) {
-                // loadedContent.push(jsonObject[order].content);
                 isParagraph(jsonObject[order].content,jsonObject[order].content_order);
             }
         else if (jsonObject[order].type === 4) {
-            // loadedContent.push(jsonObject[order].content);
             isImage(jsonObject[order].content,jsonObject[order].content_order);
         }
-          //  console.log(loadedContent);
-
-
     }
 
 
@@ -50,7 +42,6 @@ function previewPage(jsonObject) {
         heading.setAttribute('id', "previewHeading");
         heading.innerHTML = content;
         displayPage.insertBefore(heading, displayPage.children[order]);
-        // displayPage.appendChild(heading);
 
 
     }
@@ -62,7 +53,6 @@ function previewPage(jsonObject) {
         subHeading.innerHTML = content;
         displayPage.insertBefore(subHeading, displayPage.children[order]);
 
-        // loadedContent.push(content);
 
     }
 
@@ -72,20 +62,16 @@ function previewPage(jsonObject) {
         para.setAttribute('id', "previewPara");
         para.innerHTML = content;
         displayPage.insertBefore(para, displayPage.children[order]);
-        // loadedContent.push(content);
 
     }
     function isImage(content,order) {
         console.log("Image conent is " + content);
         var imgage = document.createElement('p');
         imgage.setAttribute('id', "previewImg");
-        // imgage.setAttribute('src',"server/php/files/"+ content);
-        // imgage.setAttribute('width',"100%");
-        // imgage.setAttribute('height',"50%");
+
 
         imgage.innerHTML = '<img src="server/php/files/'+ content+'" width="100%" height="100"> </img>';
         displayPage.insertBefore(imgage, displayPage.children[order]);
-        // loadedContent.push(content);
 
     }
 
