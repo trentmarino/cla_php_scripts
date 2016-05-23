@@ -48,18 +48,20 @@ include 'db_connect.php';
     <div id="container">
         <div class="starter-template">
             <h1>Room information</h1>
-            <form id="update" action="#" method="post" enctype="multipart/form-data">
+            <form class="formDropdowns" id="update" action="#" method="post" enctype="multipart/form-data">
                 <label>
                     Property:
                 </label>
                 <select class="property">
 
                 </select>
+                <br>
                 <label id="roomLabel">
                     Room:
                 </label>
                 <select class="room">
                 </select>
+                <br>
                 <button id="editval" type="button" class="btn btn-default btn-sm">
                     Edit
                     <span class="glyphicon glyphicon-cog"></span>
@@ -70,37 +72,37 @@ include 'db_connect.php';
                     <li><label>
                             Room name:
                         </label>
-                        <input id="roomName" name="roomName" type="text">
+                        <input class="cmsTextFields" id="roomName" name="roomName" type="text">
                     </li>
                     <li><label>
                             product ID:
                         </label>
-                        <input id="productid" name="productid" type="text">
+                        <input class="cmsTextFields" id="productid" name="productid" type="text">
                     </li>
 
 
                     <li><label>
                             Location name:
                         </label>
-                        <input id="location" id="name" type="text">
+                        <input class="cmsTextFields" id="location" id="name" type="text">
                     </li>
 
                     <li><label>
                             min-rate:
                         </label>
-                        <input id="min-rate" name="min-rate" type="text">
+                        <input class="cmsTextFields" id="min-rate" name="min-rate" type="text">
                     </li>
 
                     <li><label>
                             max-rate:
                         </label>
-                        <input id="max-rate" name="max-rate" type="text">
+                        <input class="cmsTextFields" id="max-rate" name="max-rate" type="text">
                     </li>
 
                     <li><label>
                             number of people:
                         </label>
-                        <input id="noGuests" name="noGuests" type="text">
+                        <input class="cmsTextFields" id="noGuests" name="noGuests" type="text">
                     </li>
                 </ul>
                 <div id="updateButton">

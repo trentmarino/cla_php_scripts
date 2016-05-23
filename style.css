@@ -27,6 +27,7 @@ input {
 {
     height: 10%;
     margin-top: 4%;
+    margin-left: 10%;
 }
 #status {
     text-align: center;
@@ -117,7 +118,6 @@ height: 70%;
 {
     background-color: aliceblue;
     width: 80%;
-    border-radius: 25px;
     padding-left: 20px;
 
 }
@@ -136,4 +136,27 @@ height: 70%;
     visibility: hidden;
 }
 
+.cmsTextFields{
+float: right;
+}
 
+.formDropdowns{
+    margin-left: 8.5%;
+}
+
+#preview{
+    margin-bottom: 1%;
+}
+
+#commit{
+    margin-bottom: 1%;
+
+}
+
+#sideBar{
+    padding-left: 10%;
+}
+
+#dropdown{
+    float: right;
+}

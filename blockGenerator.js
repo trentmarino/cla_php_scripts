@@ -35,6 +35,7 @@
         var label = document.createElement('label');
         var expand = document.createElement('input');
         block.setAttribute('class', "itemBlock");
+        block.setAttribute('style', "overflow: hidden;");
         block.setAttribute('data', count.toString());
         block.style.marginLeft = "10%";
         block.style.marginBottom = "2%";
@@ -42,6 +43,7 @@
         expand.setAttribute('data', count.toString());
         expand.setAttribute('type', "button");
         expand.setAttribute('class', "btn btn-default btn-sm");
+        expand.setAttribute('style', "float: right;");
         expand.value = "dropdown";
         select.setAttribute('id', "optionType");
         for (var i = 0; i < items.length; i++) {
@@ -198,7 +200,7 @@
         block.innerHTML += '<h1> Heading </h1>' +
             '                 <label> Heading: </label>' +
             '<input id="head' + index + '" type="text">' +
-            '<input type="button" id="set' + index + '" style="margin-right: 0; background-color: red" value="Set Field"> ';
+            '<input type="button" id="set' + index + '" style="float: right; background-color: red" value="Set Field"> ';
 
 
         var headText = document.getElementById("head" + index);
@@ -225,7 +227,7 @@
         block.innerHTML += '<h1> Sub-Heading </h1>' +
             '                  <label> Sub-Heading: </label>' +
             '<input id="subhead' + index + '" type="text">' +
-            '<input type="button" id="set' + index + '" style="margin-right: 0; background-color: red" value="Set Field"> ';
+            '<input type="button" id="set' + index + '" style="margin-right: 0; float: right; background-color: red" value="Set Field"> ';
 
         var subText = document.getElementById("subhead" + index);
         var setField = document.getElementById("set" + index);
@@ -250,7 +252,7 @@
         block.innerHTML += '<h1> Paragraph </h1>' +
             '  <label> Paragraph</label>' +
             '<textarea id="paraField' + index + '" ></textarea>' +
-            '<input type="button" id="set' + index + '" style="margin-right: 0; background-color: red" value="Set Field"> ';
+            '<input type="button" id="set' + index + '" style="margin-right: 0; float: right; background-color: red" value="Set Field"> ';
         var pText = document.getElementById("paraField" + index);
         var setField = document.getElementById("set" + index);
         setField.onclick = function () {
@@ -273,7 +275,7 @@
         block.innerHTML += '<h1> Image Upload </h1>' +
             '<label> Image</label>' +
             '<input id="fileupload' + index + '" type="file" name="files[]" data-url="server/php/" multiple> ' +
-            '<input type="button" id="set' + index + '" style="margin-right: 0; background-color: red" value="Set Field">';
+            '<input type="button" id="set' + index + '" style="margin-right: 0; float: right; background-color: red" value="Set Field">';
 
 
         var setField = document.getElementById("set" + index);
@@ -306,7 +308,7 @@
             colour = "green";
             setField.style.backgroundColor = colour;
             console.log("product id is " + product);
-            ArrayInformation[index] = jsonBuilder(4, product, "server/php/files/" +image.name, currentArray[index]);
+            ArrayInformation[index] = jsonBuilder(4, product,image.name, currentArray[index]);
         };
 
         // image.onclick = function () {
@@ -327,7 +329,7 @@
             '<option>fdgfdgdgdgdg</option>' +
             '<option>fdgfdgdgdgdg</option>' +
             '</select>' +
-            '<input type="button" id="set' + index + '" style="margin-right: 0; background-color: red" value="Set Field"> ';
+            '<input type="button" id="set' + index + '" style="margin-right: 0; float: right; background-color: red" value="Set Field"> ';
         var select = document.getElementById("tours" + index);
         var setField = document.getElementById("set" + index);
         setField.onclick = function () {
