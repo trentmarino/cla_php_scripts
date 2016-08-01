@@ -1,10 +1,10 @@
 <html>
 <head>
-    <title>Bootstrap 101 Template</title>
+    <title>Cla-Cms</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="grid.css.css">
+    <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -27,33 +27,31 @@ include 'db_connect.php';
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="#">Cairns Luxury Apartments App CMS</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">Accept Deposit</a></li>
+                <li><a href="#contact">Logout</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-<div class="row">
+<div class="row headingSection">
     <div class="col content" id="preview-screen">
         <div id="page">
            
         </div>
-
     </div>
-    <div id="container">
-        <div class="starter-template">
-            <h1>Room information</h1>
-            <form id="update" action="#" method="post" enctype="multipart/form-data">
+    <div class="col updateForm" id="container">
+        <h1>Room information</h1>
+        
+            <form class="formDropdowns" id="update" action="#" method="post" enctype="multipart/form-data">
                 <label>
                     Property:
                 </label>
                 <select class="property">
-
                 </select>
                 <label id="roomLabel">
                     Room:
@@ -65,58 +63,59 @@ include 'db_connect.php';
                     <span class="glyphicon glyphicon-cog"></span>
                 </button>
             </form>
-            <form action="update_room_info.php" method="post">
-                <ul id="form">
-                    <li><label>
-                            Room name:
-                        </label>
-                        <input id="roomName" name="roomName" type="text">
+            <form id="newInfo" action="update_room_info.php" method="post">
+                <ul id="form" class="form">
+                    <li><label>Room name:</label>
+                        <input class="cmsTextFields" id="roomName" name="roomName" type="text">
+                        <br>
                     </li>
                     <li><label>
                             product ID:
                         </label>
-                        <input id="productid" name="productid" type="text">
+                        <input class="cmsTextFields" id="productid" name="productid" type="text">
                     </li>
-
 
                     <li><label>
                             Location name:
                         </label>
-                        <input id="location" id="name" type="text">
+                        <input class="cmsTextFields" id="location" id="name" type="text">
                     </li>
 
                     <li><label>
                             min-rate:
                         </label>
-                        <input id="min-rate" name="min-rate" type="text">
+                        <input class="cmsTextFields" id="min-rate" name="min-rate" type="text">
                     </li>
 
                     <li><label>
                             max-rate:
                         </label>
-                        <input id="max-rate" name="max-rate" type="text">
+                        <input class="cmsTextFields" id="max-rate" name="max-rate" type="text">
                     </li>
 
                     <li><label>
                             number of people:
                         </label>
-                        <input id="noGuests" name="noGuests" type="text">
+                        <input class="cmsTextFields" id="noGuests" name="noGuests" type="text">
                     </li>
                 </ul>
-                <div id="updateButton">
-                    <button type="submit" class="btn btn-default btn-sm">
+                <div class="updateButtons" id="updateButton">
+                    <button type="button" id="update_room_info" class="btn btn-default btn-sm">
                         Update
                     </button>
                     <button id="loadPage" type="button" class="btn btn-default btn-sm">
                         Load Page
                     </button>
+                    <div class="alert alert-success" id="beenUpdated">
+                        Room has been updated.
+                    </div>
                 </div>
             </form>
         </div>
     </div>
-</div>
-<div id="status-Block">
-    <span id="status">Test</span>
+<div id="status-Block" class="alert alert-success">
+    Page information has been added Successfully;
+<!--    <span id="status">Test</span>-->
 </div>
 <div id="description">
     <form method="post" id="roomPage">

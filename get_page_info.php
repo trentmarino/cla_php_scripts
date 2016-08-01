@@ -1,7 +1,13 @@
 <?php
 
-include 'db_connect.php';
+//include 'db_connect.php';
+//
+$server = "localhost";
+$username = "test1";
+$password = "test";
+$db = "claDB";
 
+$conn = new mysqli($server, $username, $password, $db);
 $response = array();
 $sql = " SELECT * FROM `page_content`";
 

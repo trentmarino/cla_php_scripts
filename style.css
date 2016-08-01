@@ -1,33 +1,40 @@
 body {
     padding-top: 50px;
 }
+
 .starter-template {
     padding: 40px 15px;
     /*text-align: center;*/
 }
-#form{
+
+#form {
     list-style: none;
-    display: block;
+    /*display: block;*/
 
 }
-.room
-{
+
+.room {
     visibility: hidden;
 }
-#roomLabel{
+
+#roomLabel {
     visibility: hidden;
 }
-#result{
+
+#result {
     /*visibility: hidden;*/
 }
+
 input {
     width: 30%;
 }
-#updateButton
-{
+
+#updateButton {
     height: 10%;
     margin-top: 4%;
+    margin-left: 10%;
 }
+
 #status {
     text-align: center;
     visibility: hidden;
@@ -38,7 +45,8 @@ input {
     padding: 1%;
 
 }
-#status-Block{
+
+#status-Block {
     text-align: left;
     width: 90%;
     height: 7%;
@@ -46,94 +54,151 @@ input {
     border-style: solid;
     border-color: #dae0d8;
     margin-bottom: 1%;
-    margin-top: -4%;
+
     visibility: hidden;
 
 }
-#container{
-    width: 33%;
-    margin-left: 10%;
-}
-#page{
+
+
+
+#page {
     width: 60%;
     margin-left: 20%;
     margin-top: 22%;
     height: 70%;
     overflow-y: scroll;
 }
-#preview-screen
-{
-    width: 20%;
+
+#preview-screen {
+
     height: 430px;
-    margin-right: 30%;
     float: right;
     background-image: url("nexus4_portrait.png");
-    background-repeat: no-repeat ;
-    background-size: 500px 500px  ;
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
     background-position: center;
 }
-#previewHeading{
+
+#previewHeading {
     max-width: 200px;
     word-wrap: break-word;
 
 }
-#previewSub{
+
+#previewSub {
     max-width: 200px;
     word-wrap: break-word;
 
 }
-#previewPara{
+
+#previewPara {
     max-width: 200px;
     word-wrap: break-word;
 
 }
-#updateButton button
-{
-height: 70%;
+
+#updateButton button {
+    height: 70%;
     width: 25%;
+    margin-left: -3%;
+    margin-right: 3%;
 
 }
-#description
-{
+
+#description {
     background-color: #dae0d8;
     width: 100%;
+    margin-top: 2%;
     text-align: left;
     padding: 4%;
     visibility: hidden;
 }
 
-
-#addBlock{
-    margin-bottom: 1%;
-    width: 115px;
-}
-#removeBlock{
+#addBlock {
     margin-bottom: 1%;
     width: 115px;
 }
 
+#removeBlock {
+    margin-bottom: 1%;
+    width: 115px;
+}
 
-.itemBlock
-{
+.itemBlock {
     background-color: aliceblue;
     width: 80%;
-    border-radius: 25px;
     padding-left: 20px;
 
 }
-#dropdown{
+
+#dropdown {
     width: auto;
     margin-left: 33%;
 }
-#Tarea
-{
+
+#Tarea {
     width: 92%;
     height: 60%;
     margin-left: 4%;
     margin-right: 4%;
 }
-#loadPage{
+
+#loadPage {
     visibility: hidden;
 }
 
 
+
+.formDropdowns {
+    margin-left: 8.5%;
+}
+
+#preview {
+    margin-bottom: 1%;
+}
+
+#commit {
+    margin-bottom: 1%;
+
+}
+
+#sideBar {
+    padding-left: 10%;
+}
+
+#dropdown {
+    /*float: right;*/
+}
+
+.col.updateForm
+{
+    width: 60%;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.col.content
+{
+    width: 30%;
+}
+
+.row.headingSection {
+    width: 1000px;
+    margin-left: 10%;
+}
+.form input
+{
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+.form{
+    position: relative;
+}
+.updateForm.updateButtons{
+float: left;
+}
+
+#beenUpdated{
+    visibility: hidden;
+}

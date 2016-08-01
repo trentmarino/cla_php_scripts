@@ -70,7 +70,7 @@ function previewPage(jsonObject) {
         imgage.setAttribute('id', "previewImg");
 
 
-        imgage.innerHTML = '<img src="server/php/files/'+ content+'" width="100%" height="100"> </img>';
+        imgage.innerHTML = '<img src="'+ content+'" width="100%" height="100"> </img>';
         displayPage.insertBefore(imgage, displayPage.children[order]);
 
     }

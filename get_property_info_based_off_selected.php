@@ -1,6 +1,13 @@
 <?php
 
-include 'db_connect.php';
+//include 'db_connect.php';
+//
+$server = "localhost";
+$username = "test1";
+$password = "test";
+$db = "claDB";
+
+$conn = new mysqli($server, $username, $password, $db);
 
 $response = array();
     $sql = "SELECT product.product_name , property.idproperty,product.idproduct, product.deposit_amount_min, product_images.image_url,
@@ -8,9 +15,9 @@ $response = array();
             FROM property
             INNER JOIN product
             ON property.idproperty=product.idproperty
-            INNER JOIN producT_images
+            INNER JOIN product_images
             ON product.`idproduct` = `product_images`.`productid`
-            WHERE product.deleted = 0";
+            WHERE product.deleted = 0 AND product_images.is_thumb = 1" ;
 
 
     $result = $conn->query($sql);
